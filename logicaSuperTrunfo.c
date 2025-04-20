@@ -8,7 +8,7 @@ int main() {
     char estado1[20], estado2[20];
     char codigo1[50], codigo2[50], cidade1[20], cidade2[20];
     unsigned long int populacao1, populacao2; 
-    int Nturistico1, Nturistico2,escolha;
+    int Nturistico1, Nturistico2,escolha1,escolha2;
     double PIBilhao1, PIBilhao2, PIB1, PIB2; 
     float area1, area2, densi1, densi2, capita1, capita2,SuperPoder1,SuperPoder2;
 
@@ -98,26 +98,25 @@ int main() {
     printf("5.Densidade Populacional\n");
     printf("6.PIB per Capita\n");
     printf("7.Super Poder\n");
-    printf("++Escolha o Atributo q deseja comparar?\n");
-    scanf("%d",&escolha);
-switch (escolha)
+    printf("++Escolha o Primeiro Atributo q deseja comparar?\n");
+    scanf("%d",&escolha1);
+    printf("++Escolha o Segundo Atributo q deseja comparar?\n");
+    scanf("%d",&escolha2);
+
+switch (escolha1)
 {
 case 1:
 printf("\nAtributo:Populaçao\n");
+printf("Carta 1: %ld habitantes\n",populacao1);
+printf("Carta 2: %ld habitantes\n",populacao2);
 if (populacao1>populacao2){
-    printf("Carta 1: %ld habitantes\n",populacao1);
-    printf("Carta 2: %ld habitantes\n",populacao2);
     printf("///Carta 1 Venceu///\n");
-  }
+}
   else{
     if (populacao1<populacao2){
-      printf("Carta 1: %ld habitantes\n",populacao1);
-      printf("Carta 2: %ld habitantes\n",populacao2);
       printf("///Carta 2 Venceu///\n");
     }
     else{
-      printf("Carta 1: %ld habitantes\n",populacao1);
-      printf("Carta 2: %ld habitantes\n",populacao2);
       printf("///Empate entre carta 1 e 2///\n");
     }
   }
@@ -125,20 +124,16 @@ if (populacao1>populacao2){
 
   case 2:
   printf("\nAtributo:Area\n");
+  printf("Carta 1: %.2f Km²\n",area1);
+  printf("Carta 2: %.2f Km²\n",area2);
   if (area1>area2){
-    printf("Carta 1: %.2f Km²\n",area1);
-    printf("Carta 2: %.2f Km²\n",area2);
     printf("///Carta 1 Venceu///\n");
   }
   else{
     if (area1<area2){
-      printf("Carta 1: %.2f Km²\n",area1);
-      printf("Carta 2: %.2f km²\n",area2);
       printf("///Carta 2 Venceu///\n");
     }
     else{
-      printf("Carta 1: %.2f km²\n",area1);
-      printf("Carta 2: %.2f km²\n",area2);
       printf("///Empate entre carta 1 e 2///\n");
     }
   }
@@ -146,40 +141,32 @@ if (populacao1>populacao2){
 
     case 3:
     printf("\nAtributo:PIB\n");
+    printf("Carta 1: %.2f Bilhões\n",PIBilhao1);
+    printf("Carta 2: %.2f Bilhões\n",PIBilhao2);
     if (PIBilhao1>PIBilhao2){
-        printf("Carta 1: %.2f Bilhões\n",PIBilhao1);
-        printf("Carta 2: %.2f Bilhões\n",PIBilhao2);
         printf("///Carta 1 Venceu///\n");
       }
       else{
         if (PIBilhao1<PIBilhao2){
-          printf("Carta 1: %.2f Bilhões\n",PIBilhao1);
-          printf("Carta 2: %.2f Bilhões\n",PIBilhao2);
           printf("///Carta 2 Venceu///\n");
         }
         else{
-          printf("Carta 1: %.2f Bilhões\n",PIBilhao1);
-          printf("Carta 2: %.2f Bilhões\n",PIBilhao2);
           printf("///Empate entre carta 1 e 2///\n");
         }
       }
       break;
       case 4:
       printf("\nAtributo:Pontos Turisticos\n");
+      printf("Carta 1: %d Pontos Turisticos\n",Nturistico1);
+      printf("Carta 2: %d Pontos Turisticos\n",Nturistico2);
       if (Nturistico1>Nturistico2){
-        printf("Carta 1: %d Pontos Turisticos\n",Nturistico1);
-        printf("Carta 2: %d Pontos Turisticos\n",Nturistico2);
         printf("///Carta 1 Venceu///\n");
       }
       else{
         if (Nturistico1<Nturistico2){
-          printf("Carta 1: %d Pontos Turisticos\n",Nturistico1);
-          printf("Carta 2: %d Pontos Turisticos\n",Nturistico2);
           printf("///Carta 2 Venceu///\n");
         }
         else{
-          printf("Carta 1: %d habitantes\n",Nturistico1);
-          printf("Carta 2: %d habitantes\n",Nturistico2);
           printf("///Empate entre carta 1 e 2///\n");
         }
       }
@@ -187,20 +174,16 @@ if (populacao1>populacao2){
 
       case 5:
       printf("\nAtributo:Densidade\n");
-      if (densi1>densi2){
-        printf("Carta 1: %.2f hab/km²\n",densi1);
-        printf("Carta 2: %.2f hab/km²\n",densi2);
+      printf("Carta 1: %.2f hab/km²\n",densi1);
+      printf("Carta 2: %.2f hab/km²\n",densi2);
+      if (densi1<densi2){
         printf("///Carta 1 Venceu///\n");
       }
       else{
-        if (densi1<densi2){
-          printf("Carta 1: %.2f hab/km²\n",densi1);
-          printf("Carta 2: %.2f hab/km²\n",densi2);
+        if (densi1>densi2){
           printf("///Carta 2 Venceu///\n");
         }
         else{
-          printf("Carta 1: %.2f hab/km²\n",densi1);
-          printf("Carta 2: %.2f hab/km²\n",densi2);
           printf("///Empate entre carta 1 e 2///\n");
         }
       }
@@ -208,20 +191,16 @@ if (populacao1>populacao2){
       
       case 6:
       printf("\nAtributo:PIB per Capita\n");
+      printf("Carta 1: %.2f Reais\n",capita1);
+      printf("Carta 2: %.2f Reais\n",capita2);
       if (capita1>capita2){
-        printf("Carta 1: %.2f Reais\n",capita1);
-        printf("Carta 2: %.2f Reais\n",capita2);
         printf("///Carta 1 Venceu///\n");
       }
       else{
         if (capita1<capita2){
-          printf("Carta 1: %.2f Reais\n",capita1);
-          printf("Carta 2: %.2f Reais\n",capita2);
           printf("///Carta 2 Venceu///\n");
         }
         else{
-          printf("Carta 1: %.2f Reais\n",capita1);
-          printf("Carta 2: %.2f Reais\n",capita2);
           printf("///Empate entre carta 1 e 2///\n");
         }
       }
@@ -229,20 +208,16 @@ if (populacao1>populacao2){
 
       case 7:
       printf("\nAtributo:Super Poder\n");
+      printf("Carta 1: %.2f Super Poder\n",SuperPoder1);
+      printf("Carta 2: %.2f Super Poder\n",SuperPoder2);
       if (SuperPoder1>SuperPoder2){
-        printf("Carta 1: %.2f Super Poder\n",SuperPoder1);
-        printf("Carta 2: %.2f Super Poder\n",SuperPoder2);
         printf("///Carta 1 Venceu///\n");
       }
       else{
         if (SuperPoder1<SuperPoder2){
-          printf("Carta 1: %.2f Super Poder\n",SuperPoder1);
-          printf("Carta 2: %.2f Super Poder\n",SuperPoder2);
           printf("///Carta 2 Venceu///\n");
         }
         else{
-          printf("Carta 1: %.2f Super Poder\n",SuperPoder1);
-          printf("Carta 2: %.2f Super Poder\n",SuperPoder2);
           printf("///Empate entre carta 1 e 2///\n");
         }
       }
@@ -253,5 +228,476 @@ printf("***Voce escolheu a opção errada****");
     break;
 }
    
-    return 0;
+switch (escolha2)
+{
+case 1:
+printf("\nAtributo:Populaçao\n");
+printf("Carta 1: %ld habitantes\n",populacao1);
+printf("Carta 2: %ld habitantes\n",populacao2);
+if (populacao1>populacao2){
+    printf("///Carta 1 Venceu///\n");
+  }
+  else{
+    if (populacao1<populacao2){
+      printf("///Carta 2 Venceu///\n");
+    }
+    else{
+      printf("///Empate entre carta 1 e 2///\n");
+    }
+  }
+  break;
+
+  case 2:
+  printf("\nAtributo:Area\n");
+  printf("Carta 1: %.2f Km²\n",area1);
+  printf("Carta 2: %.2f Km²\n",area2);
+  if (area1>area2){
+    printf("///Carta 1 Venceu///\n");
+  }
+  else{
+    if (area1<area2){
+      printf("///Carta 2 Venceu///\n");
+    }
+    else{
+      printf("///Empate entre carta 1 e 2///\n");
+    }
+  }
+    break;
+
+    case 3:
+    printf("\nAtributo:PIB\n");
+    printf("Carta 1: %.2f Bilhões\n",PIBilhao1);
+    printf("Carta 2: %.2f Bilhões\n",PIBilhao2);
+    if (PIBilhao1>PIBilhao2){
+        printf("///Carta 1 Venceu///\n");
+      }
+      else{
+        if (PIBilhao1<PIBilhao2){
+          printf("///Carta 2 Venceu///\n");
+        }
+        else{
+          printf("///Empate entre carta 1 e 2///\n");
+        }
+      }
+      break;
+      case 4:
+      printf("\nAtributo:Pontos Turisticos\n");
+      printf("Carta 1: %d Pontos Turisticos\n",Nturistico1);
+      printf("Carta 2: %d Pontos Turisticos\n",Nturistico2);
+      if (Nturistico1>Nturistico2){
+        printf("///Carta 1 Venceu///\n");
+      }
+      else{
+        if (Nturistico1<Nturistico2){
+          printf("///Carta 2 Venceu///\n");
+        }
+        else{
+          printf("///Empate entre carta 1 e 2///\n");
+        }
+      }
+      break;
+
+      case 5:
+      printf("\nAtributo:Densidade\n");
+      printf("Carta 1: %.2f hab/km²\n",densi1);
+      printf("Carta 2: %.2f hab/km²\n",densi2);
+      if (densi1<densi2){
+        printf("///Carta 1 Venceu///\n");
+      }
+      else{
+        if (densi1>densi2){
+          printf("///Carta 2 Venceu///\n");
+        }
+        else{
+          printf("///Empate entre carta 1 e 2///\n");
+        }
+      }
+      break;
+      
+      case 6:
+      printf("\nAtributo:PIB per Capita\n");
+      printf("Carta 1: %.2f Reais\n",capita1);
+      printf("Carta 2: %.2f Reais\n",capita2);
+      if (capita1>capita2){
+        printf("///Carta 1 Venceu///\n");
+      }
+      else{
+        if (capita1<capita2){
+          printf("///Carta 2 Venceu///\n");
+        }
+        else{
+          printf("///Empate entre carta 1 e 2///\n");
+        }
+      }
+      break;
+
+      case 7:
+      printf("\nAtributo:Super Poder\n");
+      printf("Carta 1: %.2f Super Poder\n",SuperPoder1);
+      printf("Carta 2: %.2f Super Poder\n",SuperPoder2);
+      if (SuperPoder1>SuperPoder2){
+        printf("///Carta 1 Venceu///\n");
+      }
+      else{
+        if (SuperPoder1<SuperPoder2){
+          printf("///Carta 2 Venceu///\n");
+        }
+        else{
+          printf("///Empate entre carta 1 e 2///\n");
+        }
+      }
+      break;
+
+default:
+printf("***Voce escolheu a opção errada****");
+    break;
+}
+
+//Somas dos atributos
+
+printf("***Soma dos atributos***\n\n ");
+
+if (escolha1==1 && escolha2==2 || escolha1==2 && escolha2==1){
+    if(populacao1+area1>populacao2+area2)
+    {
+        printf("Carta 1 = %.2f\n",populacao1+area1);
+        printf("Carta 2 = %.2f\n",populacao2+area2);
+        printf("----Carta 1 Venceu----");
+    } else if(populacao2+area2>populacao1+area1){
+        printf("Carta 1 = %.2f\n",populacao1+area1);
+        printf("Carta 2 = %.2f\n",populacao2+area2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",populacao1+area1);
+        printf("Carta 2 = %.2f\n",populacao2+area2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==1 && escolha2==3 || escolha1==3 && escolha2==1){
+    if(populacao1+PIBilhao1>populacao2+PIBilhao2)
+    {
+        printf("Carta 1 = %.2f\n",populacao1+PIBilhao1);
+        printf("Carta 2 = %.2f\n",populacao2+PIBilhao2);
+        printf("----Carta 1 Venceu----");
+    } else if(populacao2+PIBilhao2>populacao1+PIBilhao1){
+        printf("Carta 1 = %.2f\n",populacao1+PIBilhao1);
+        printf("Carta 2 = %.2f\n",populacao2+PIBilhao2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",populacao1+PIBilhao1);
+        printf("Carta 2 = %.2f\n",populacao2+PIBilhao2);
+        printf("-----EMPATE-----");
+    }
+
+}
+else if(escolha1==1 && escolha2==4 || escolha1==4 && escolha2==1){
+    if(populacao1+Nturistico1>populacao2+Nturistico2){
+        printf("Carta 1 = %.2f\n",populacao1+Nturistico1);
+        printf("Carta 2 = %.2f\n",populacao2+Nturistico2);
+        printf("----Carta 1 Venceu----");
+    } else if(populacao2+Nturistico2>populacao1+Nturistico1){
+        printf("Carta 1 = %.2f\n",populacao1+Nturistico1);
+        printf("Carta 2 = %.2f\n",populacao2+Nturistico2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",populacao1+Nturistico1);
+        printf("Carta 2 = %.2f\n",populacao2+Nturistico2);
+        printf("-----EMPATE-----");
+    }
+    
+}
+else if(escolha1==1 && escolha2==5 || escolha1==5 && escolha2==1){
+    if(populacao1+densi1>populacao2+densi2)
+    {
+        printf("Carta 1 = %.2f\n",populacao1+densi1);
+        printf("Carta 2 = %.2f\n",populacao2+densi2);
+        printf("----Carta 1 Venceu----");
+    } else if(populacao2+densi2>populacao1+densi2){
+        printf("Carta 1 = %.2f\n",populacao1+densi1);
+        printf("Carta 2 = %.2f\n",populacao2+densi2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",populacao1+densi1);
+        printf("Carta 2 = %.2f\n",populacao2+densi2);
+        printf("-----EMPATE-----");
+    }
+ 
+}
+else if(escolha1==1 && escolha2==6 || escolha1==6 && escolha2==1){
+    if(populacao1+capita1>populacao2+capita2)
+    {
+        printf("Carta 1 = %.2f\n",populacao1+capita1);
+        printf("Carta 2 = %.2f\n",populacao2+capita2);
+        printf("----Carta 1 Venceu----");
+    } else if(populacao2+capita2>populacao1+capita1){
+        printf("Carta 1 = %.2f\n",populacao1+capita1);
+        printf("Carta 2 = %.2f\n",populacao2+capita2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",populacao1+capita1);
+        printf("Carta 2 = %.2f\n",populacao2+capita2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==1 && escolha2==7 || escolha1==7 && escolha2==1){
+    if(populacao1+SuperPoder1>populacao2+SuperPoder2)
+    {
+        printf("Carta 1 = %.2f\n",populacao1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",populacao2+SuperPoder2);
+        printf("----Carta 1 Venceu----");
+    } else if(populacao2+SuperPoder2>populacao1+SuperPoder1){
+        printf("Carta 1 = %.2f\n",populacao1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",populacao2+SuperPoder2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",populacao1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",populacao2+SuperPoder2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==2 && escolha2==3 || escolha1==3 && escolha2==2){
+    if(area1+PIBilhao1>area2+PIBilhao2)
+    {
+        printf("Carta 1 = %.2f\n",area1+PIBilhao1);
+        printf("Carta 2 = %.2f\n",area2+PIBilhao2);
+        printf("----Carta 1 Venceu----");
+    } else if(area2+PIBilhao2>area1+PIBilhao1){
+        printf("Carta 1 = %.2f\n",area1+PIBilhao1);
+        printf("Carta 2 = %.2f\n",area2,+PIBilhao2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",area1+PIBilhao1);
+        printf("Carta 2 = %.2f\n",area2+PIBilhao2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==2 && escolha2==4 || escolha1==4 && escolha2==2){
+    if(area1+Nturistico1>area2+Nturistico2)
+    {
+        printf("Carta 1 = %.2f\n",area1+Nturistico1);
+        printf("Carta 2 = %.2f\n",area2+Nturistico2);
+        printf("----Carta 1 Venceu----");
+    } else if(area2+Nturistico2>area1+Nturistico1){
+        printf("Carta 1 = %.2f\n",area1+Nturistico1);
+        printf("Carta 2 = %.2f\n",area2,+Nturistico2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",area1+Nturistico1);
+        printf("Carta 2 = %.2f\n",area2+Nturistico2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==2 && escolha2==5 || escolha1==5 && escolha2==2){
+    if(area1+densi1>area2+densi2)
+    {
+        printf("Carta 1 = %.2f\n",area1+densi1);
+        printf("Carta 2 = %.2f\n",area2+densi2);
+        printf("----Carta 1 Venceu----");
+    } else if(area2+densi2>area1+densi1){
+        printf("Carta 1 = %.2f\n",area1+densi1);
+        printf("Carta 2 = %.2f\n",area2+densi2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",area1+densi1);
+        printf("Carta 2 = %.2f\n",area2+densi2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==2 && escolha2==6 || escolha1==6 && escolha2==2){
+    if(area1+capita1>area2+capita2)
+    {
+        printf("Carta 1 = %.2f\n",area1+capita1);
+        printf("Carta 2 = %.2f\n",area2+capita2);
+        printf("----Carta 1 Venceu----");
+    } else if(area2+capita2>area1+capita2){
+        printf("Carta 1 = %.2f\n",area1+capita1);
+        printf("Carta 2 = %.2f\n",area2,+capita2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",area1+capita1);
+        printf("Carta 2 = %.2f\n",area2+capita2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==2 && escolha2==7 || escolha1==7 && escolha2==2){
+    if(area1+SuperPoder1>area2+SuperPoder2)
+    {
+        printf("Carta 1 = %.2f\n",area1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",area2+SuperPoder2);
+        printf("----Carta 1 Venceu----");
+    } else if(area2+SuperPoder2>area1+SuperPoder1){
+        printf("Carta 1 = %.2f\n",area1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",area2,+SuperPoder2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",area1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",area2+SuperPoder2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==3 && escolha2==4 || escolha1==4 && escolha2==3){
+
+    if(PIBilhao1+Nturistico1>PIBilhao2+Nturistico2)
+    {
+        printf("Carta 1 = %.2f\n",PIBilhao1+Nturistico1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+Nturistico2);
+        printf("----Carta 1 Venceu----");
+    } else if(PIBilhao2+Nturistico2>PIBilhao1+Nturistico2){
+        printf("Carta 1 = %.2f\n",PIBilhao1+Nturistico2);
+        printf("Carta 2 = %.2f\n",PIBilhao2+Nturistico2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",PIBilhao1+Nturistico1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+Nturistico2);
+        printf("-----EMPATE-----");
+    }
+
+}
+else if(escolha1==3 && escolha2==5 || escolha1==5 && escolha2==3){
+    if(PIBilhao1+densi1>PIBilhao2+densi2)
+    {
+        printf("Carta 1 = %.2f\n",PIBilhao1+densi1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+densi2);
+        printf("----Carta 1 Venceu----");
+    } else if(PIBilhao2+densi2>PIBilhao1+densi1){
+        printf("Carta 1 = %.2f\n",PIBilhao1+densi1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+densi2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",PIBilhao1+densi1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+densi2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==3 && escolha2==6 || escolha1==6 && escolha2==3){
+    if(PIBilhao1+capita1>PIBilhao2+capita2)
+    {
+        printf("Carta 1 = %.2f\n",PIBilhao1+capita1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+capita2);
+        printf("----Carta 1 Venceu----");
+    } else if(PIBilhao2+capita2>PIBilhao1+capita1){
+        printf("Carta 1 = %.2f\n",PIBilhao1+capita1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+capita2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",PIBilhao1+capita1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+capita2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==3 && escolha2==7 || escolha1==7 && escolha2==3){
+    if(PIBilhao1+SuperPoder1>PIBilhao2+SuperPoder2)
+    {
+        printf("Carta 1 = %.2f\n",PIBilhao1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+SuperPoder2);
+        printf("----Carta 1 Venceu----");
+    } else if(PIBilhao2+SuperPoder2>PIBilhao1+SuperPoder1){
+        printf("Carta 1 = %.2f\n",PIBilhao1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+SuperPoder2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",PIBilhao1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",PIBilhao2+SuperPoder2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==4 && escolha2==5 || escolha1==5 && escolha2==4){
+    if(Nturistico1+densi1>Nturistico2+densi2)
+    {
+        printf("Carta 1 = %.2f\n",Nturistico1+densi1);
+        printf("Carta 2 = %.2f\n",Nturistico2+densi2);
+        printf("----Carta 1 Venceu----");
+    } else if(Nturistico2+densi2>Nturistico1+densi1){
+        printf("Carta 1 = %.2f\n",Nturistico1+densi1);
+        printf("Carta 2 = %.2f\n",Nturistico2+densi2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",Nturistico1+densi1);
+        printf("Carta 2 = %.2f\n",Nturistico2+densi2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==4 && escolha2==6 || escolha1==6 && escolha2==4){
+    if(Nturistico1+capita1>Nturistico2+capita2)
+    {
+        printf("Carta 1 = %.2f\n",Nturistico1+capita1);
+        printf("Carta 2 = %.2f\n",Nturistico2+capita2);
+        printf("----Carta 1 Venceu----");
+    } else if(Nturistico2+capita2>Nturistico1+capita1){
+        printf("Carta 1 = %.2f\n",Nturistico1+capita1);
+        printf("Carta 2 = %.2f\n",Nturistico2+capita2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",Nturistico1+capita1);
+        printf("Carta 2 = %.2f\n",Nturistico2+capita2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==4 && escolha2==7 || escolha1==7 && escolha2==4){
+    if(Nturistico1+SuperPoder1>Nturistico2+SuperPoder2)
+    {
+        printf("Carta 1 = %.2f\n",Nturistico1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",Nturistico2+SuperPoder2);
+        printf("----Carta 1 Venceu----");
+    } else if(Nturistico2+SuperPoder2>Nturistico1+SuperPoder1){
+        printf("Carta 1 = %.2f\n",Nturistico1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",Nturistico2+SuperPoder2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",Nturistico1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",Nturistico2+SuperPoder2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==5 && escolha2==6 || escolha1==6 && escolha2==5){
+    if(densi1+capita1>densi2+capita2)
+    {
+        printf("Carta 1 = %.2f\n",densi1+capita1);
+        printf("Carta 2 = %.2f\n",densi2+capita2);
+        printf("----Carta 1 Venceu----");
+    } else if(densi2+capita2>densi1+capita1){
+        printf("Carta 1 = %.2f\n",densi1+capita1);
+        printf("Carta 2 = %.2f\n",densi2+capita2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",densi1+capita1);
+        printf("Carta 2 = %.2f\n",densi2+capita2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==5 && escolha2==7 || escolha1==7 && escolha2==5){
+    if(densi1+SuperPoder1>densi2+SuperPoder2)
+    {
+        printf("Carta 1 = %.2f\n",densi1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",densi2+SuperPoder2);
+        printf("----Carta 1 Venceu----");
+    } else if(densi2+SuperPoder2>densi1+SuperPoder1){
+        printf("Carta 1 = %.2f\n",densi1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",densi2+SuperPoder2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",densi1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",densi2+SuperPoder2);
+        printf("-----EMPATE-----");
+    }
+}
+else if(escolha1==6 && escolha2==7 || escolha1==7 && escolha2==6){
+    if(capita1+SuperPoder1>capita2+SuperPoder2)
+    {
+        printf("Carta 1 = %.2f\n",capita1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",capita2+SuperPoder2);
+        printf("----Carta 1 Venceu----");
+    } else if(capita2+SuperPoder2>capita1+SuperPoder1){
+        printf("Carta 1 = %.2f\n",capita1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",capita2+SuperPoder2);
+        printf("----Carta 2 Venceu----");  
+    }else{
+        printf("Carta 1 = %.2f\n",capita1+SuperPoder1);
+        printf("Carta 2 = %.2f\n",capita2+SuperPoder2);
+        printf("-----EMPATE-----");
+    }
+}
+
+
+return 0;
 }
